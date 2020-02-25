@@ -1,16 +1,14 @@
-<div class="navbar">
-  <div class="title">
-    <h1><%= link_to 'Rails Beer Wikitionary', articles_path %></h1>
-  </div>
-  <div class="new-article">
-    <%= link_to 'New Article', new_article_path %>
-  </div>
-</div>
+<%= render 'navbar' %>
 <div class="container">
-  <div>
-    <h1><%= @article.title %> <%= link_to 'Edit article', edit_article_path(@article) %></h1>
-    <%= link_to 'Delete article', article_path(@article), method: 'delete', data: { confirm: 'Are you sure? Really?' } %>
-    <p><%= @article.content %></p>
+  <div class="article-container">
+    <div class="article">
+      <h1><%= @article.title %></h1>
+      <p><%= @article.content %></p>
+    </div>
+    <div class="article-actions">
+      <%= link_to 'Edit article', edit_article_path(@article), class: 'btn-green' %>
+      <%= link_to 'Delete article', article_path(@article), method: 'delete', data: { confirm: 'Are you sure? Really?' }, class: 'btn-green' %>
+    </div>
   </div>
 
 </div>

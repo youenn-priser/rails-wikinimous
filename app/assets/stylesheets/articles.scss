@@ -1,3 +1,62 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$gray: #E9F1F7;
+$green: #0B5D1E;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  background-color: $gray;
+  position: sticky;
+  top: 0;
+}
+.btn-green {
+  text-decoration: none;
+  border-radius: 4px;
+  color: white;
+  background-color: $green;
+  padding: 10px;
+  opacity: 0.6;
+}
+.btn-green:hover {
+  opacity: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  margin: 10px auto;
+}
+.title {
+  text-decoration: none;
+  color: $green;
+}
+.article-actions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
+}
+.article-link {
+  text-decoration: none;
+  color: $green;
+  opacity: 0.8;
+}
+.article-link:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+.new_article {
+  display: flex;
+  flex-direction: column;
+  color: $green;
+}
+.edit_article {
+  display: flex;
+  flex-direction: column;
+  color: $green;
+}

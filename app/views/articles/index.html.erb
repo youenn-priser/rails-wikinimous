@@ -1,16 +1,8 @@
-<div class="navbar">
-  <div class="title">
-    <h1><%= link_to 'Rails Beer Wikitionary', articles_path %></h1>
-  </div>
-  <div class="new-article">
-    <%= link_to 'New Article', new_article_path %>
-  </div>
-</div>
+<%= render 'navbar' %>
 <div class="container">
-  <h1>All Articles</h1>
   <% @articles.each do |article| %>
     <div class="article">
-      <h1><%= link_to article.title, article_path(article) %></h1>
+      <h1><%= link_to article.title, article_path(article), class: 'article-link' %></h1>
     </div>
   <% end %>
 </div>
